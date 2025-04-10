@@ -8,7 +8,6 @@ MenuBar=MainMenuBar;MainMenuBar.xojo_menu;&h000000007BC59FFF;&h0000000000000000;
 BuildSteps=Build Automation;Build Automation.xojo_code;&h0000000061AB97FF;&h0000000000000000;false
 Class=Slideshow;Slideshow.xojo_code;&h00000000373BCFFF;&h0000000000000000;false
 Class=SlideshowItem;SlideshowItem.xojo_code;&h0000000013F8C7FF;&h0000000000000000;false
-DefaultWindow=windowMain
 AppMenuBar=MainMenuBar
 MajorVersion=1
 MinorVersion=0

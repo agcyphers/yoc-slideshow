@@ -59,7 +59,7 @@ Protected Class SlideshowItem
 		  '   First is the backdrop.
 		  if mTitle <> "" and mContent <> "" then
 		    if color.IsDarkMode then
-		      g.DrawingColor = color.RGB( 0, 0, 0, 165 )
+		      g.DrawingColor = color.RGB( 0, 0, 0, 105 )
 		    else
 		      g.DrawingColor = color.RGB( 255, 255, 255, 165 )
 		    end if
