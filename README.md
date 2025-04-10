@@ -1,7 +1,9 @@
 # Year of Code Slideshow
 This is my submission for the April 2025 Xojo Year of Code April.
 
-It's a simple slideshow component with just a few methods.
+Simple slideshow component with just a few methods.
+
+[slideshow.webm](https://github.com/user-attachments/assets/dd3326f3-ce4c-4e45-bef0-a53d6c54d2a0)
 
 Functionality Showcased:
 - Threaded loading
