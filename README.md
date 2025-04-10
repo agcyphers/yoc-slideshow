@@ -29,6 +29,7 @@ Stop | None | None | Stops the Slideshow timer that controls stack movement.
 
 #### Properties
 Name | Type | Default Value | Description
+--- | --- | --- | ---
 BackgroundColor | ColorGroup | Nil | Color drawn to the stage behind slide images.
 ImageInterval | Integer | 5000 | Time in milliseconds to wait between slide transitions.
 PauseOnHover | Boolean | True | Will pause movement between slides (but not current transitions) when the user hovers their mouse over the display.
@@ -50,6 +51,7 @@ Invalidate | None | None | Signals that the slide needs to be redrawn.
 
 #### Properties
 Name | Type | Default Value | Description
+--- | --- | --- | ---
 Content | String | "" | Content text drawn at the bottom of the slide.
 Image | Picture | Nil | Image drawn to the display.
 Title | String | "" | Title text drawn at the bottom of the slide.
