@@ -8,6 +8,26 @@ Inherits DesktopCanvas
 	#tag EndEvent
 
 	#tag Event
+		Sub Closing()
+		  #Pragma BreakOnExceptions False
+		  try
+		    if slideTimer <> nil then
+		      slideTimer.RunMode = timer.RunModes.Off
+		      RemoveHandler slideTimer.Action, AddressOf onNextSlide
+		    end if
+		    if transitionTimer <> nil then
+		      transitionTimer.RunMode = timer.RunModes.Off
+		      RemoveHandler transitionTimer.Action, AddressOf onTransitionProgress
+		    end if
+		  catch
+		    '// A failure of any type doesn't much matter
+		    '   here. We're closing and disposing of everything
+		  end try
+		  #Pragma BreakOnExceptions True
+		End Sub
+	#tag EndEvent
+
+	#tag Event
 		Sub Deactivated()
 		  '// Do not implement
 		End Sub
