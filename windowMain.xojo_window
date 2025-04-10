@@ -39,7 +39,6 @@ Begin DesktopWindow windowMain
       PanelCount      =   2
       Panels          =   ""
       Scope           =   2
-      SelectedPanelIndex=   0
       TabIndex        =   2
       TabPanelIndex   =   0
       TabStop         =   False
@@ -83,7 +82,6 @@ Begin DesktopWindow windowMain
          Width           =   282
       End
       Begin DesktopProgressBar progress
-         Active          =   False
          AllowAutoDeactivate=   True
          AllowTabStop    =   True
          Enabled         =   True
@@ -98,7 +96,6 @@ Begin DesktopWindow windowMain
          LockRight       =   False
          LockTop         =   True
          MaximumValue    =   100
-         PanelIndex      =   0
          Scope           =   2
          TabIndex        =   1
          TabPanelIndex   =   1
@@ -108,10 +105,6 @@ Begin DesktopWindow windowMain
          Value           =   0.0
          Visible         =   True
          Width           =   282
-         _mIndex         =   0
-         _mInitialParent =   ""
-         _mName          =   ""
-         _mPanelIndex    =   0
       End
       Begin Slideshow stage
          AllowAutoDeactivate=   True
@@ -146,15 +139,12 @@ Begin DesktopWindow windowMain
       End
    End
    Begin Thread loader
-      DebugIdentifier =   ""
       Index           =   -2147483648
       LockedInPosition=   False
       Priority        =   5
       Scope           =   2
       StackSize       =   0
       TabPanelIndex   =   0
-      ThreadID        =   0
-      ThreadState     =   0
       Type            =   0
    End
 End
@@ -163,8 +153,6 @@ End
 #tag WindowCode
 	#tag Event
 		Function CancelClosing(appQuitting As Boolean) As Boolean
-		  '// Wind everything down.
-		  if loader.ThreadState <> Thread.ThreadStates.NotRunning then loader.Stop
 		  stage.Stop
 		End Function
 	#tag EndEvent
@@ -216,6 +204,8 @@ End
 
 #tag EndWindowCode
 
+#tag Events status
+#tag EndEvents
 #tag Events stage
 	#tag Event
 		Sub Pressed()
@@ -270,7 +260,7 @@ End
 		    
 		    '// If something went wrong earlier, 
 		    '   create a random color image.
-		    if image = nil then image = randomImage( imageSize.Width, imageSize.Height )
+		    if image = nil then image = randomImage( stage.Width, stage.Height )
 		    
 		    '// Notify the UI that we have an iamge to add.
 		    var dItem as new Dictionary
