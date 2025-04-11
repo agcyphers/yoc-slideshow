@@ -1,5 +1,5 @@
 # Year of Code Slideshow
-This is my submission for the April 2025 Xojo Year of Code April.
+This is my submission for the April 2025 Xojo Year of Code.
 
 Simple slideshow component with just a few methods.
 
