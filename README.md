@@ -40,10 +40,10 @@ TransitionLength | Integer | 1000 | Length of time in milliseconds for each tran
 ### SlideShowItem Class
 #### Constructors
 ```xojo
-var newItem = new SlideshowItem( image as Picture )
+var newItem as new SlideshowItem( image as Picture )
 ```
 ```xojo
-var newItem = new SlideshowItem( image as Picture, title as String, content as String )
+var newItem as new SlideshowItem( image as Picture, title as String, content as String )
 ```
 
 #### Methods
